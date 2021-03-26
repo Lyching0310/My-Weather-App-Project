@@ -154,3 +154,11 @@ img {
 #day-temp {
   font-size: 16px;
 }
+#githubLink {
+  display: block;
+  text-align: center;
+  font-family: "Palanquin", sans-serif;
+}
+#gitLink {
+  text-decoration: none;
+}
