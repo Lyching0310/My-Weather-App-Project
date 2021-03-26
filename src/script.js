@@ -125,4 +125,4 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", celsiTemp);
 
 //Search Default Display
-searchDefault("New York");
+searchDefault("London");
