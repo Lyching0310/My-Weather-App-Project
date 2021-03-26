@@ -1,0 +1,156 @@
+body {
+  background: #ece3da;
+}
+
+.container {
+  max-width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+  font-family: "Palanquin", sans-serif;
+  text-size-adjust: 100%;
+}
+
+.weather-container {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background: linear-gradient(#1c4954, #0d2c37);
+  color: white;
+  opacity: 0.8;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  padding: 20px 40px 1px;
+}
+
+.city-date h1 {
+  font-size: 57px;
+}
+
+.city-date h2 {
+  font-size: 37px;
+}
+
+.wind-condition-time {
+  position: relative;
+  top: -120px;
+  text-align: right;
+}
+.wind-condition-time h3 {
+  font-size: 42px;
+}
+
+.condition {
+  font-size: 17px;
+}
+
+.fa-sun {
+  display: block;
+  text-align: center;
+  font-size: 100px;
+  color: whitesmoke;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: -90px;
+  margin-bottom: 110px;
+}
+#weatherType,
+#temperature {
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: -90px;
+}
+#weatherType {
+  font-size: 30px;
+  margin-bottom: 82px;
+  text-transform: capitalize;
+}
+#temperature {
+  font-size: 55px;
+  margin-bottom: 90px;
+}
+.degrees {
+  position: relative;
+  bottom: 20px;
+  font-size: 25px;
+}
+
+#celsius {
+  text-decoration: none;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+#celsius:hover {
+  color: #c8ed8f;
+  font-weight: bold;
+}
+
+#fahrenheit {
+  text-decoration: none;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+#fahrenheit:hover {
+  color: #c8ed8f;
+  font-weight: bold;
+}
+
+.search-section {
+  margin-bottom: 90px;
+  margin-top: -80px;
+  display: block;
+  text-align: center;
+}
+
+#discover-button {
+  background: #9dd9f3;
+  border: 2px solid #0d2c37;
+  color: #0b0e28;
+  transition: all 200ms ease-in-out;
+}
+
+#now-button {
+  background: #c8ed8f;
+  border: 2px solid #0d2c37;
+  color: #0b0e28;
+  transition: all 200ms ease-in-out;
+}
+
+#discover-button:hover,
+#now-button:hover {
+  background: white;
+  color: #0b0e28;
+}
+
+img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 25px;
+  margin-left: 240px;
+  margin-top: -90px;
+}
+#days {
+  padding: 10px 5px 1px;
+  font-style: italic;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.fa-cloud-sun {
+  display: block;
+  padding-block: 12px;
+  color: whitesmoke;
+  font-size: 45px;
+}
+.fa-cloud-rain {
+  display: block;
+  padding-block: 12px;
+  color: whitesmoke;
+  font-size: 45px;
+}
+#day-temp {
+  font-size: 16px;
+}

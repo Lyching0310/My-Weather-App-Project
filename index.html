@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/7617442a88.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Top Row Right-->
+
+      <div id="weather" class="weather-container">
+        <header>
+          <div class="row">
+            <div class="city-date">
+              <div class="col-6" id="cityName"><h1>London</h1></div>
+              <div class="col-6"><h2>Friday</h2></div>
+            </div>
+          </div>
+
+          <!----->
+
+          <!-- Top Row Left-->
+          <div class="row">
+            <div class="wind-condition-time" id="typeOfCondition">
+              <div class="col-12"><h3>15:00</h3></div>
+              <div class="col-12">
+                <span class="condition" id="humid"> Humidity: 1%</span>
+              </div>
+              <div class="col-12">
+                <span class="condition" id="wind"> Wind: 6 mph</span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!----->
+
+        <!--Center Page-->
+        <section class="center page">
+          <i class="fas fa-sun"></i>
+          <p id="weatherType">Sunny</p>
+          <p id="temperature">
+            <span id="numericalTemp"></span>
+            <a href="#" class="degrees" id="celsius">°C </a>|
+            <a href="#" id="fahrenheit" class="degrees">°F</a>
+          </p>
+        </section>
+
+        <!----->
+
+        <!-- Search Bar Section-->
+
+        <div class="search-section">
+          <form class="row g-2 justify-content-center" id="search-form">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                id="search-bar"
+                placeholder="Enter a city"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-auto justify-content-center">
+              <button
+                type="submit"
+                class="btn btn-primary mb-3"
+                id="discover-button"
+              >
+                Search
+              </button>
+            </div>
+            <div class="col-auto justify-content-center">
+              <button
+                type="submit"
+                class="btn btn-success mb-3"
+                id="now-button"
+              >
+                Current
+              </button>
+            </div>
+          </form>
+        </div>
+        <!----->
+
+        <!-- Globe Icon-->
+        <img src="images/globe.jpeg" alt="globe" />
+        <!----->
+
+        <!--Weather in the week-->
+        <footer>
+          <div class="row justify-content-center">
+            <div class="col-sm-2" id="days">
+              Saturday
+              <i class="fas fa-cloud-sun"></i>
+              <p id="day-temp">12°</p>
+            </div>
+            <div class="col-sm-2" id="days">
+              Sunday
+              <i class="fas fa-cloud-sun"></i>
+              <p id="day-temp">11°</p>
+            </div>
+            <div class="col-sm-2" id="days">
+              Monday
+              <i class="fas fa-cloud-sun"></i>
+              <p id="day-temp">9°</p>
+            </div>
+            <div class="col-sm-2" id="days">
+              Tuesday
+              <i class="fas fa-cloud-sun"></i>
+              <p id="day-temp">12°</p>
+            </div>
+            <div class="col-sm-2" id="days">
+              Wednesday
+              <i class="fas fa-cloud-sun"></i>
+              <p id="day-temp">12°</p>
+            </div>
+            <div class="col-sm-2" id="days">
+              Thursday
+              <i class="fas fa-cloud-rain"></i>
+              <p id="day-temp">8°</p>
+            </div>
+          </div>
+        </footer>
+        <!----->
+      </div>
+    </div>
+    <script src=" src/script.js"></script>
+  </body>
+</html>
