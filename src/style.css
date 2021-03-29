@@ -19,12 +19,12 @@ body {
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 600px;
+  max-width: 590px;
   padding: 20px 40px 1px;
 }
 
 .city-date h1 {
-  font-size: 55px;
+  font-size: 60px;
 }
 
 .city-date h2 {
@@ -33,7 +33,7 @@ body {
 
 .wind-condition-time {
   position: relative;
-  top: -120px;
+  top: -100px;
   text-align: right;
 }
 .wind-condition-time h3 {
