@@ -99,7 +99,6 @@ body {
 }
 
 .search-section {
-  margin-bottom: 90px;
   margin-top: -80px;
   display: block;
   text-align: center;
@@ -125,14 +124,6 @@ body {
   color: #0b0e28;
 }
 
-img {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin-bottom: 25px;
-  margin-left: 240px;
-  margin-top: -90px;
-}
 #days {
   padding: 10px 5px 1px;
   font-style: italic;
