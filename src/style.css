@@ -99,6 +99,7 @@ body {
 }
 
 .search-section {
+  margin-bottom: 20px;
   margin-top: -80px;
   display: block;
   text-align: center;
