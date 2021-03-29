@@ -1,3 +1,20 @@
+@media screen and (min-width: 70em) {
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+  }
+
+  article {
+    margin-bottom: 0;
+  }
+
+  footer {
+    border-top: 1px solid #ccc;
+    margin-top: 2em;
+  }
+}
+
 body {
   background: #ece3da;
 }
@@ -33,7 +50,7 @@ body {
 
 .wind-condition-time {
   position: relative;
-  top: -100px;
+  top: -120px;
   text-align: right;
 }
 .wind-condition-time h3 {
