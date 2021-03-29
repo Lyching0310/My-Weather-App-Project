@@ -1,12 +1,6 @@
-@media (orientation: landscape) {
-  body {
-    flex-direction: row;
-  }
-}
-
-@media (orientation: portrait) {
-  body {
-    flex-direction: column;
+@media screen and (min-width: 800px) {
+  .container {
+    margin: 1em 2em;
   }
 }
 
