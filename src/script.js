@@ -40,7 +40,6 @@ function displayForecast() {
               <i class="fas fa-cloud-sun"></i>
               <p id="day-temp">12°</p>
             </div>`;
-    forecastHTML = forecastHTML + `</div>`;
   });
   forecastElement.innerHTML = forecastHTML;
 }
