@@ -30,11 +30,17 @@ h3.innerHTML = `${currentHour}:${currentMinutes}`;
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML = `<div class="col-sm-2" id="days">
+  let forecastHTML = "";
+
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-sm-2" id="days">
               Saturday
               <i class="fas fa-cloud-sun"></i>
               <p id="day-temp">12°</p>
             </div>`;
+
+  forecastElement.innerHTML = forecastHTML();
 }
 
 //Search Engine Response Call//
