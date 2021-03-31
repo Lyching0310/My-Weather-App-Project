@@ -25,10 +25,13 @@ let currentMinutes = addZero(current.getMinutes());
 let h3 = document.querySelector("h3");
 h3.innerHTML = `${currentHour}:${currentMinutes}`;
 
-
 //Forecast Element//
 
-function displayForecast();
+function displayForecast() {
+  let forecastElement = document.querySelector("#days");
+
+  forecastElement.innerHTML;
+}
 
 //Search Engine Response Call//
 
@@ -106,7 +109,6 @@ function getPosition(event) {
 
 let buttonCurrent = document.querySelector("#now-button");
 buttonCurrent.addEventListener("click", getPosition);
-
 
 // Temperature Event CALL//
 
