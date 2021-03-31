@@ -44,6 +44,8 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+//Skeleton --->
+
 //Search Engine Response Call//
 
 function showTemp(response) {
