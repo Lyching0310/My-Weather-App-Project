@@ -31,20 +31,21 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class ="row"> `;
-  let daysNew= ["Monday","Tuesday","Wednesday","Thursday","Saturday","Sunday"];
-  daysNew.forEach(function(day)){
-forecastHTML =
-    forecastHTML +
-    `<div class="col-sm-2" id="days">
-              ${day}
+  let days = ["Monday", "Tuesday", "Wednesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-sm-2" id="days">
+              Saturday
               <i class="fas fa-cloud-sun"></i>
               <p id="day-temp">12°</p>
             </div>`;
-  forecastHTML = forecastHTML + `</div>`;
+    forecastHTML = forecastHTML + `</div>`;
 
-  forecastElement.innerHTML = forecastHTML;
+    forecastElement.innerHTML = forecastHTML;
+  });
 }
-}
+
 //Search Engine Response Call//
 
 function showTemp(response) {
