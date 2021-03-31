@@ -36,14 +36,13 @@ function displayForecast() {
     forecastHTML =
       forecastHTML +
       `<div class="col-sm-2" id="days">
-              Saturday
+              ${day}
               <i class="fas fa-cloud-sun"></i>
               <p id="day-temp">12°</p>
             </div>`;
     forecastHTML = forecastHTML + `</div>`;
-
-    forecastElement.innerHTML = forecastHTML;
   });
+  forecastElement.innerHTML = forecastHTML;
 }
 
 //Search Engine Response Call//
