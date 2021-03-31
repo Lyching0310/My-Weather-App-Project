@@ -33,11 +33,10 @@ function displayForecast() {
   let forecastHTML = `<div class ="row"> `;
   let daysNew= ["Monday","Tuesday","Wednesday","Thursday","Saturday","Sunday"];
   daysNew.forEach(function(day)){
-
-  forecastHTML =
+forecastHTML =
     forecastHTML +
     `<div class="col-sm-2" id="days">
-              Saturday
+              ${day}
               <i class="fas fa-cloud-sun"></i>
               <p id="day-temp">12°</p>
             </div>`;
