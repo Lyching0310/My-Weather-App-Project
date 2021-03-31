@@ -28,9 +28,9 @@ h3.innerHTML = `${currentHour}:${currentMinutes}`;
 //Forecast Element//
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#days");
+  let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML;
+  forecastElement.innerHTML = "Forecast";
 }
 
 //Search Engine Response Call//
