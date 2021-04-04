@@ -25,28 +25,49 @@ let currentMinutes = addZero(current.getMinutes());
 let h3 = document.querySelector("h3");
 h3.innerHTML = `${currentHour}:${currentMinutes}`;
 
+//Formating Days
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
 //Forecast Element//
 
 function displayForecast(response) {
-  console.log(response.data.daily);
-  //let forecast = response.data.daily;
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class ="row"> `;
 
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-sm-2" id="days">
-              ${forecastDay.dt}
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-sm-2" id="days">
+              ${formatDay(forecastDay.dt)}
               <img 
-              src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
               alt=""
               width="42"
               />
 
-              <p id="day-temp">${forecastDay.temp.day}°</p>
+              <p id="day-temp">${Math.round(forecastDay.temp.max)}°</p>
             </div>`;
+    }
   });
   forecastElement.innerHTML = forecastHTML;
 }
