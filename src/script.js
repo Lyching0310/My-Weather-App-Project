@@ -72,6 +72,9 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+//center icon
+//add center icon
+
 //Coordinates call for temp
 
 function getForecast(coordinates) {
