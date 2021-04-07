@@ -58,10 +58,9 @@ function getForecast(coordinates) {
 //Skeleton --->
 
 //Date format for function
-
 function formatDate(timestamp) {
   let currentDate = new Date(timestamp);
-  let daysNew = [
+  let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -70,15 +69,16 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  let currentDay = daysNew[currentDate.getDay()];
+  let currentDay = days[currentDate.getDay()];
   return `${currentDay}`;
 }
+
 //Time Format
 function formatTime(timestamp) {
   let currentDate = new Date(timestamp);
   let currentHour = currentDate.getHours();
-  if (currentHours < 10) {
-    currentHours = `0${currentHours}`;
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
   }
   let currentMinutes = currentDate.getMinutes();
   if (currentMinutes < 10) {
@@ -91,7 +91,7 @@ function formatTime(timestamp) {
 
 function showTemp(response) {
   //City Name//
-  //console.log(response.data);
+  console.log(response.data);
   let currentCity = response.data.name;
 
   //Current//
