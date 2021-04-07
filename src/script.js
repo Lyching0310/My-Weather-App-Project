@@ -1,30 +1,3 @@
-let current = new Date();
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let currentDay = days[current.getDay()];
-let h2 = document.querySelector("h2");
-h2.innerHTML = `${currentDay}`;
-
-function addZero(time) {
-  if (time < 10) {
-    time = "0" + time;
-  }
-  return time;
-}
-
-let currentHour = addZero(current.getHours());
-let currentMinutes = addZero(current.getMinutes());
-let h3 = document.querySelector("h3");
-h3.innerHTML = `${currentHour}:${currentMinutes}`;
-
 //Formating Days
 
 function formatDay(timestamp) {
@@ -72,9 +45,6 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-//center icon
-//add center icon
-
 //Coordinates call for temp
 
 function getForecast(coordinates) {
@@ -87,6 +57,30 @@ function getForecast(coordinates) {
 
 //Skeleton --->
 
+//Date format for function
+
+function formatDate(timestamp) {
+  let currentDate = new Date(timestamp);
+  let daysNew = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = daysNew[currentDate.getDay()];
+  return `${currentDay}`;
+}
+//Time Format
+function formatTime(timestamp) {
+  let currentDate = new Date(timestamp);
+  let currentHour = currentDate.getHours();
+  let currentMinutes = currentDate.getMinutes();
+
+  return `${currentHour}:${currentMinutes}`;
+}
 //Search Engine Response Call//
 
 function showTemp(response) {
@@ -98,7 +92,7 @@ function showTemp(response) {
   let newH1 = document.querySelector("h1");
   newH1.innerHTML = currentCity;
 
-  //temperature//
+  //Temperature//
   let tempCurrent = Math.round(response.data.main.temp);
   let newTempCel = document.querySelector("#numericalTemp");
   newTempCel.innerHTML = tempCurrent;
@@ -111,13 +105,19 @@ function showTemp(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = `Wind: ${response.data.wind.speed} mph`;
 
-  //weather type//
+  //Weather Type//
   let description = document.querySelector("#weatherType");
   description.innerHTML = response.data.weather[0].description;
 
-  //time//
+  //Date//
+  let dateElement = document.querySelector("#day");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
-  //icon element middle//
+  //Time//
+  let timeElement = document.querySelector("#timeDisplay");
+  timeElement.innerHTML = formatTime(response.data.dt * 1000);
+
+  //Icon Element Middle Page//
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
