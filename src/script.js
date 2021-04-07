@@ -77,7 +77,13 @@ function formatDate(timestamp) {
 function formatTime(timestamp) {
   let currentDate = new Date(timestamp);
   let currentHour = currentDate.getHours();
+  if (currentHours < 10) {
+    currentHours = `0${currentHours}`;
+  }
   let currentMinutes = currentDate.getMinutes();
+  if (currentMinutes < 10) {
+    currentMinutes = `0${currentMinutes}`;
+  }
 
   return `${currentHour}:${currentMinutes}`;
 }
