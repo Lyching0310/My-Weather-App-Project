@@ -62,7 +62,7 @@ function displayForecast(response) {
                 forecastDay.weather[0].icon
               }@2x.png"
               alt=""
-              width="70"
+              width="80"
               />
 
               <p id="day-temp">${Math.round(forecastDay.temp.max)}°</p>
@@ -115,11 +115,13 @@ function showTemp(response) {
   let description = document.querySelector("#weatherType");
   description.innerHTML = response.data.weather[0].description;
 
-  //icon element middle
+  //time//
+
+  //icon element middle//
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
