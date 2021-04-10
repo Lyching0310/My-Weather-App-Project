@@ -77,7 +77,6 @@ body {
 #celsius {
   text-decoration: none;
   color: white;
-  transition: all 200ms ease-in-out;
 }
 
 .search-section {
