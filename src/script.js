@@ -191,19 +191,6 @@ function celsiTemp(event) {
   celsiusTemp.innerHTML = Math.round(((temperature - 32) * 5) / 9);
 }
 
-function fahrenTemp(event) {
-  event.preventDefault();
-  let fahrenheitTemp = document.querySelector("#numericalTemp");
-  let temperature = fahrenheitTemp.innerHTML;
-  fahrenheitTemp.innerHTML = Math.round((temperature * 9) / 5 + 32);
-}
-
-let farenheit = document.querySelector("#fahrenheit");
-farenheit.addEventListener("click", fahrenTemp);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", celsiTemp);
-
 //Search Default Display
 searchDefault("London");
 

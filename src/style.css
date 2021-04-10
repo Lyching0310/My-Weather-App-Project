@@ -76,23 +76,6 @@ body {
 #celsius {
   text-decoration: none;
   color: white;
-  transition: all 200ms ease-in-out;
-}
-
-#celsius:hover {
-  color: #c8ed8f;
-  font-weight: bold;
-}
-
-#fahrenheit {
-  text-decoration: none;
-  color: white;
-  transition: all 200ms ease-in-out;
-}
-
-#fahrenheit:hover {
-  color: #c8ed8f;
-  font-weight: bold;
 }
 
 .search-section {
