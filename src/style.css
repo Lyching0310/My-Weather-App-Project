@@ -47,7 +47,7 @@ body {
   display: block;
   text-align: center;
   margin: 0 auto;
-  margin-top: -115px;
+  margin-top: -119px;
   margin-bottom: 70px;
 }
 
@@ -122,7 +122,12 @@ body {
   color: #0b0e28;
 }
 
-.globeGif {
+#globeIcon {
+  display: block;
+  margin: 0 auto;
+  width: 12%;
+  margin-top: -60px;
+  margin-bottom: -25px;
 }
 
 #days {
@@ -130,6 +135,7 @@ body {
   font-style: italic;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 16px;
 }
 .fa-cloud-sun {
   display: block;
