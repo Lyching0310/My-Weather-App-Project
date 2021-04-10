@@ -68,20 +68,21 @@ body {
   margin-bottom: 90px;
 }
 
+.degrees {
+  position: relative;
+  bottom: 20px;
+  font-size: 25px;
+}
+
 #celsius {
   text-decoration: none;
   color: white;
-  margin: 0 auto;
-  position: relative;
-  bottom: 163px;
-  left: 302px;
-  font-size: 26px;
-  margin-bottom: 20px;
+  transition: all 200ms ease-in-out;
 }
 
 .search-section {
   margin-bottom: 20px;
-  margin-top: -135px;
+  margin-top: -85px;
   display: block;
   text-align: center;
 }
