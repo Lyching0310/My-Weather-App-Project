@@ -163,13 +163,14 @@ form.addEventListener("click", searchCity);
 
 //Current City Event Call//
 function showPosition(position) {
-  let long = position.coords.longitude;
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+
+  let lon = position.coords.longitude;
   let lat = position.coords.latitude;
-  console.log(lat);
-  console.log(long);
   let apiKey = "aff29a6b33c30edafe99104b632f71d7";
   let apiEnd = "https://api.openweathermap.org/data/2.5/weather";
-  let apiUrl = `${apiEnd}?q=lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+  let apiUrl = `${apiEnd}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
 }
